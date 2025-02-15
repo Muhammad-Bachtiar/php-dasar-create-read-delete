@@ -32,7 +32,7 @@ function tambah($add){
 function hapus($delete){
     global $host;
 
-    mysql_query($host, "DELETE FROM siswa WHERE id = $delete");
+    mysqli_query($host, "DELETE FROM siswa WHERE id = $delete");
 
     return mysqli_affected_rows($host);
 }

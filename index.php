@@ -33,7 +33,8 @@ $data = query("SELECT * FROM siswa");
             <td> <?php echo $row["jurusan"]; ?></td>
             <td> <?php echo $row["alamat"]; ?></td>
             <td> <a href="edit.php">Edit</a>
-                <a href="hapus.php?id=<?= $row["id"] ?>">Hapus</a>
+                <a href="hapus.php?id=<?= $row["id"]; ?>"
+                onclick="return confirm('Yakin Akan Hapus data ini?')">Hapus</a>
 
             <?php $no++?>
         </tr>

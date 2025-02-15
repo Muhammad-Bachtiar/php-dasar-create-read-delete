@@ -1,12 +1,18 @@
 <?php
 require 'koneksi.php';
 
-$delete = $_GET["id"];
+$id = $_GET["id"];
 
-if( hapus($delete) > 0){
-    echo "Data Berhasil Di Hapus!";
+if( hapus($id) > 0){
+    echo "<script>
+    alert ('Data Berhasil Ditambahkan');
+    document.location.href='index.php';
+</script>";
 }else{
-    echo "Data Gagal Di Hapus!";
+echo "<script>
+    alert ('Data gagal Ditambahkan');
+    document.location.href='add.php';
+</script>";
 }
 
 
